@@ -1,0 +1,5 @@
+#control_panel { white-space: nowrap; }
+#control_panel a { outline: none; display: inline-block; width: 24px; height: 24px; }
+#control_panel a img { border: 0; }
+#save_button { position: absolute; padding: 0; margin: 0; }
+#play_button { display: inline-block; }
