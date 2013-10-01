@@ -16,19 +16,19 @@
 
 <body>
 
-  <div id="status">
-   Recorder Status...
-  </div>
+	<div id="status">
+	Recorder Status...
+	</div>
 
-  <div id="control_panel">
-  <a id="record_button" onclick="Recorder.record('audio', 'audio.wav');" href="javascript:void(0);" title="Record"><img src="images/record.png" width="24" height="24" alt="Record"/></a>
-  <span id="save_button">
-    <span id="flashcontent">
-      <p>Your browser must have JavaScript enabled and the Adobe Flash Player installed.</p>
-    </span>
-  </span>
-  <a id="play_button" style="display:none;" onclick="Recorder.playBack('audio');" href="javascript:void(0);" title="Play"><img src="images/play.png" width="24" height="24" alt="Play"/></a>
-  </div>
+	<div id="control_panel">
+		<input type="image" id="record_button" onclick="Recorder.record('audio', 'audio.wav');" src="images/record.png" width="24" height="24" alt="Record" />
+	 	<span id="save_button">
+	    <span id="flashcontent">
+	    <p>Your browser must have JavaScript enabled and the Adobe Flash Player installed.</p>
+	    </span>
+	  	</span>
+	  	<input type="image" id="play_button" style="display:none;" onclick="Recorder.playBack('audio');" title="Play" src="images/play.png" width="24" height="24" alt="Play"/>
+ 	</div>
 
   <div>Duration: <span id="duration"></span></div>
   <div>Activity Level: <span id="activity_level"></span></div>
@@ -89,5 +89,3 @@
 
 </body>
 </html>
-
-

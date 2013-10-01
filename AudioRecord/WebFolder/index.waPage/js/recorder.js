@@ -44,7 +44,7 @@ function microphone_recorder_events()
   case "recording":
     var name = arguments[1];
     Recorder.hide();
-    $('#record_button img').attr('src', 'images/stop.png');
+    $('#record_button').attr('src', 'images/stop.png');
     $('#play_button').hide();
     break;
 
@@ -52,15 +52,15 @@ function microphone_recorder_events()
     var name = arguments[1];
     var duration = arguments[2];
     Recorder.show();
-    $('#record_button img').attr('src', 'images/record.png');
+    $('#record_button').attr('src', 'images/record.png');
     $('#duration').text(duration.toFixed(4) + " seconds");
     $('#play_button').show();
     break;
 
   case "playing":
     var name = arguments[1];
-    $('#record_button img').attr('src', 'images/record.png');
-    $('#play_button img').attr('src', 'images/stop.png');
+    $('#record_button').attr('src', 'images/record.png');
+    $('#play_button').attr('src', 'images/stop.png');
     break;
 
   case "playback_started":
@@ -70,8 +70,8 @@ function microphone_recorder_events()
 
   case "stopped":
     var name = arguments[1];
-    $('#record_button img').attr('src', 'images/record.png');
-    $('#play_button img').attr('src', 'images/play.png');
+    $('#record_button').attr('src', 'images/record.png');
+    $('#play_button').attr('src', 'images/play.png');
     break;
 
   case "save_pressed":
