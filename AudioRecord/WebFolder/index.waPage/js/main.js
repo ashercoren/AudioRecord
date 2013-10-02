@@ -11,7 +11,7 @@
   var flashvars = {'event_handler': 'microphone_recorder_events', 'upload_image': 'images/upload.png'};
   var params = {};
   var attributes = {'id': "recorderApp", 'name':  "recorderApp"};
-  swfobject.embedSWF("recorder.swf", "flashcontent", appWidth, appHeight, "11.0.0", "", flashvars, params, attributes);
+  swfobject.embedSWF("recorder.swf", "flashcontent", appWidth, appHeight, "10.1.0", "", flashvars, params, attributes);
 });
 
 function configureMicrophone() {
@@ -19,7 +19,11 @@ function configureMicrophone() {
     return;
   }
 
-  Recorder.configure($('#rate').val(), $('#gain').val(), $('#silenceLevel').val(), $('#silenceTimeout').val());
-  Recorder.setUseEchoSuppression($('#useEchoSuppression').is(":checked"));
-  Recorder.setLoopBack($('#loopBack').is(":checked"));
+  //Recorder.configure($('#rate').val(), $('#gain').val(), $('#silenceLevel').val(), $('#silenceTimeout').val());
+  //Recorder.setUseEchoSuppression($('#useEchoSuppression').is(":checked"));
+  //Recorder.setLoopBack($('#loopBack').is(":checked"));
+  Recorder.configure(22, 100, 0, 2000);
+  Recorder.setUseEchoSuppression(true);
+  Recorder.setLoopBack(false);
+  
 }
