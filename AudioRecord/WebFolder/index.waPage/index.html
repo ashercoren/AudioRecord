@@ -16,10 +16,6 @@
 
 <body>
 
-	<div id="status">
-	Recorder Status...
-	</div>
-
 	<div id="control_panel">
 		<input type="image" id="record_button" onclick="Recorder.record('audio', 'audio.wav');" src="images/record.png" width="24" height="24" alt="Record" />
 	 	<span id="save_button">
@@ -30,62 +26,17 @@
 	  	<input type="image" id="play_button" style="display:none;" onclick="Recorder.playBack('audio');" title="Play" src="images/play.png" width="24" height="24" alt="Play"/>
  	</div>
 
-  <div>Duration: <span id="duration"></span></div>
-  <div>Activity Level: <span id="activity_level"></span></div>
-  <div>Upload status: <span id="upload_status"></span></div>
+	<div>Duration: <span id="duration"></span></div>
+  	<div>Upload status: <span id="upload_status"></span></div>
+
+	<div id="upload_status">
+ 	</div>
 
   <form id="uploadForm" name="uploadForm" action="upload.php">
     <input name="authenticity_token" value="xxxxx" type="hidden">
     <input name="upload_file[parent_id]" value="1" type="hidden">
     <input name="format" value="json" type="hidden">
   </form>
-
-  <h4>Configure Microphone</h4>
-  <ul>
-    <form onsubmit="return false;">
-      <li>
-	<label for="rate">Rate</label>
-	<select id="rate" name="rate">
-	  <option value="44">44,100 Hz</option>
-	  <option value="22" selected>22,050 Hz</option>
-	  <option value="11">11,025 Hz</option>
-	  <option value="8">8,000 Hz</option>
-	  <option value="5">5,512 Hz</option>
-	</select>
-      </li>
-
-      <li>
-	<label for="gain">Gain</label>
-	<select id="gain" name="gain">
-	</select>
-      </li>
-
-      <li>
-	<label for="silenceLevel">Silence Level</label>
-	<select id="silenceLevel" name="silenceLevel">
-	</select>
-      </li>
-
-      <li>
-	<label for="silenceTimeout">Silence Timeout</label>
-	<input id="silenceTimeout" name="silenceTimeout" value="2000"/>
-      </li>
-
-      <li>
-	<input id="useEchoSuppression" name="useEchoSuppression" type="checkbox"/>
-	<label for="useEchoSuppression">Use Echo Suppression</label>
-      </li>
-
-      <li>
-	<input id="loopBack" name="loopBack" type="checkbox"/>
-	<label for="loopBack">Loop Back</label>
-      </li>
-
-      <li>
-	<button onclick="configureMicrophone();">Configure</button>
-      </li>
-    </form>
-  </ul>
 
 </body>
 </html>
